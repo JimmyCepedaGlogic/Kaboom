@@ -1,0 +1,23 @@
+.theme-ofertas {
+  --header-color: #14532d;
+  --menu-color: #166534;
+  --menu-accent: #ca8a04;
+  --letra-color: #ca8a04;
+  --menu-border: #dcfce7;
+  --pagina-fondo: #f0fdf4;
+  --pagina-texto: #14532d;
+  --letra-unica: Georgia, 'Times New Roman', serif;
+}
+
+.ofertas {
+  min-height: 40vh;
+  padding: 2rem 1.5rem;
+  background: var(--pagina-fondo);
+  color: var(--pagina-texto);
+}
+
+.ofertas h1 {
+  font-family: var(--letra-unica);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}

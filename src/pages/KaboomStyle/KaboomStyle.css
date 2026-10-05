@@ -1,0 +1,38 @@
+.theme-kaboom-style {
+  --header-color: #0b1c2c;
+  --menu-color: #1e3a5f;
+  --menu-accent: #0a2744;
+  --letra-color: #0a2744;
+  --menu-border: #d6d0c4;
+  --pagina-fondo: #f7f3ec;
+  --pagina-texto: #0b1c2c;
+  --letra-unica: Georgia, 'Times New Roman', serif;
+  --banner-fondo: #e8e4dc;
+  background-color: #f7f3ec;
+  background-image: url('../../assets/images/PaperStyle.svg');
+  background-repeat: repeat;
+  background-size: 393px 327.5px;
+  background-position: top left;
+}
+
+.kaboom-style {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  color: var(--pagina-texto);
+}
+
+.kaboom-style__banner {
+  --banner-fondo: #e8e4dc;
+  flex: 0 0 auto;
+  min-height: calc(100dvh - var(--app-topbar-height, 7.5rem));
+  height: calc(100dvh - var(--app-topbar-height, 7.5rem));
+}
+
+@media (max-width: 768px) {
+  .kaboom-style__banner {
+    min-height: calc(100svh - var(--app-topbar-height, 6.5rem));
+    height: calc(100svh - var(--app-topbar-height, 6.5rem));
+  }
+}

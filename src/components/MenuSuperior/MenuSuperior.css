@@ -1,0 +1,115 @@
+.menu-superior {
+  width: 100%;
+  padding: 0.85rem 1.5rem 1.1rem;
+  border-bottom: 1px solid var(--menu-border, #e2e2e2);
+}
+
+.menu-superior__lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.menu-superior__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.5rem;
+  padding: 0.35rem 0.15rem;
+  text-decoration: none;
+  color: var(--menu-color, #3a3a3a);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.menu-superior__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--menu-accent, #c45c26);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.28s ease;
+}
+
+.menu-superior__link:hover {
+  color: var(--menu-accent, #c45c26);
+  transform: translateY(-2px);
+}
+
+.menu-superior__link:hover::after,
+.menu-superior__link--activo::after {
+  transform: scaleX(1);
+}
+
+.menu-superior__link--activo {
+  color: var(--menu-accent, #c45c26);
+}
+
+.menu-superior__icono {
+  font-size: 1.05rem;
+  transition: transform 0.25s ease;
+}
+
+.menu-superior__link:hover .menu-superior__icono {
+  transform: scale(1.15);
+}
+
+.menu-superior__texto {
+  white-space: nowrap;
+}
+
+.menu-superior__texto--corto {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-superior {
+    padding: 0.45rem 0 0.55rem;
+  }
+
+  .menu-superior__lista {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.35rem;
+    padding: 0 0.75rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+
+  .menu-superior__lista::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-superior__link {
+    flex-shrink: 0;
+    gap: 0.3rem;
+    min-height: 2.75rem;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.78rem;
+  }
+
+  .menu-superior__texto--largo {
+    display: none;
+  }
+
+  .menu-superior__texto--corto {
+    display: inline;
+  }
+
+  .menu-superior__link:hover {
+    transform: none;
+  }
+}

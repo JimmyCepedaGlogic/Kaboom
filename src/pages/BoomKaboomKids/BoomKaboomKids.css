@@ -1,0 +1,38 @@
+.theme-boom-kaboom-kids {
+  --header-color: #422006;
+  --menu-color: #78350f;
+  --menu-accent: #e11d48;
+  --letra-color: #e11d48;
+  --menu-border: #f5d0a9;
+  --pagina-fondo: #fff9f0;
+  --pagina-texto: #422006;
+  --letra-unica: Georgia, 'Times New Roman', serif;
+  --banner-fondo: #fde68a;
+  background-color: #fff9f0;
+  background-image: url('../../assets/images/PaperKids.svg');
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  background-position: top left;
+}
+
+.boom-kaboom-kids {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  color: var(--pagina-texto);
+}
+
+.boom-kaboom-kids__banner {
+  --banner-fondo: #fde68a;
+  flex: 0 0 auto;
+  min-height: calc(100dvh - var(--app-topbar-height, 7.5rem));
+  height: calc(100dvh - var(--app-topbar-height, 7.5rem));
+}
+
+@media (max-width: 768px) {
+  .boom-kaboom-kids__banner {
+    min-height: calc(100svh - var(--app-topbar-height, 6.5rem));
+    height: calc(100svh - var(--app-topbar-height, 6.5rem));
+  }
+}
